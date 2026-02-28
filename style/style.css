@@ -1,0 +1,82 @@
+/*  */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+/* <weight>: Use a value from 200 to 1000
+ <uniquifier>: Use a unique and descriptive class name
+
+https://fonts.google.com/specimen/Nunito
+
+.nunito-<uniquifier> {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+:root {
+    --color1: #470A68;
+    --color2: oklch(91.291% 0.04833 309.687);
+    --color3: #8246af;
+    --color4: lab(94.66% 4.81 -4.83);
+    /* --color4: #ddd5e4; */
+    --color5: #e5e1e6;
+}
+
+/* ---------- RESET ----------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+
+
+}
+
+
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ---------- FIN RESET ----------*/
+
+.synthworldLogo {
+    width: 130px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.barraTop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--color4);
+    width: 100%;
+}
+
+.header_navbar {
+    width: 100%;
+    background-color: var(--color2);
+}
+
+.navbar__menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px;
+    justify-content: space-evenly;
+    font-size: 1.1rem;
+
+}
