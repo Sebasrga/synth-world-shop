@@ -19,6 +19,7 @@ https://fonts.google.com/specimen/Nunito
     --color4: lab(94.66% 4.81 -4.83);
     /* --color4: #ddd5e4; */
     --color5: #e5e1e6;
+    --color6: hsl(303, 81%, 41%);
 }
 
 /* ---------- RESET ----------*/
@@ -38,30 +39,33 @@ a {
     text-decoration: none;
 }
 
-.botonDeCategoria{
+.botonDeCategoria {
     background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  cursor: pointer;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
 }
 
 
 /* ---------- FIN RESET ----------*/
 
-.synthworldLogo {
-    width: 130px;
-}
-
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    position: sticky;
+    top: 0;
 
 }
+
+.synthworldLogo {
+    width: 130px;
+}
+
+
 
 .barraTop {
     display: flex;
@@ -70,6 +74,16 @@ header {
     justify-content: space-evenly;
     background-color: var(--color4);
     width: 100%;
+}
+
+.menuLogin {
+    display: flex;
+    align-items: center;
+}
+
+.menuCarrito {
+    display: flex;
+    align-items: center;
 }
 
 .header_navbar {
@@ -87,10 +101,95 @@ header {
 
 }
 
-.iconoFormato{
+.iconoFormato {
     width: 30px;
 }
 
-.itemImagen{
+
+
+main {
+    background-color: var(--color5);
+    padding: 1rem;
+}
+
+.tituloMain{
+    padding: 2rem 2rem 2rem 0;
+}
+
+.contenedorDeProductos{
+    /* display: grid; */
+    /* grid-template-columns: repeat(4, 1fr); ---------------------TEMPLATE COLUMN*/
+    /* grid-template-rows: repeat(4, 1fr); */
+
+    display:flex;
+    flex-direction: column;
+    
+    
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+
+.itemImagen {
     width: 300px;
+    /* max-width: 100%; --------------------------------USAR CON TEMPLATE-COLLUMN*/
+}
+
+
+.itemInfo{
+ padding-left: 20px;
+ max-width: 50%; 
+ font-size: 1.2rem;
+}
+
+
+/* .itemSubMenu{
+    padding-left: 15px;
+} */
+
+.itemTitulo{
+    font-size: 2rem;
+}
+
+.itemPrecio{
+    font-size: 2rem;
+}
+
+.itemAgregar{
+border: 0;
+background-color: var(--color6);
+color: var(--color5);
+padding: 0.5rem;
+font-size: 1.5rem;
+}
+
+
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--color4);
+    color: var(--color1);
+    font-weight: bold;
+    height: 8vh;
+    width: 100%;
+
+}
+
+.footerContenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+
+}
+
+.footerTexto {
+    font-size: 1.3rem;
 }
