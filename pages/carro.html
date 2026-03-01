@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synth World Shop | Carro de compras</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <div class="contenedorPrincipal"><!-- ----------CONTENEDOR MAIN -->
+
+        <!-- ----------------------------HEADER -->
+        <header>
+            <div class="barraTop">
+                <a href="../index.html"><img class="synthworldLogo" src="../media/synthworld-logo.png"
+                        alt="Logotipo de Synth World E-Shop"></a>
+                <h1>Synth World Shop</h1>
+                <p><img class="iconoFormato" src="../icon/usuario.png" alt="">Login</p>
+                <a class="botonMenu botonDeCarrito active" href="#"><img class="iconoFormato"
+                        src="../icon/carrito-de-compras.png" alt="">Carrito <span
+                        class="cantidadItemsAgregados">0</span> </a>
+                <!-- <h2>Carrito</h2> -->
+            </div>
+            <nav class="header_navbar">
+                <ul class="navbar__menu">
+                    <li><button class="botonMenu botonDeCategoria">Productos disponibles</button></li>
+                    <li><button class="botonMenu botonDeCategoria">Sintetizadores</button></li>
+                    <li><button class="botonMenu botonDeCategoria">Drum machines</button></li>
+                    <li><button class="botonMenu botonDeCategoria">Software VST</button></li>
+                    <li><button class="botonMenu botonDeCategoria">Accesorios</button></li>
+                    <!-- <li>Productos disponibles (todos)</li>
+                    <li>Sintetizadores</li>
+                    <li>Drum machines</li>
+                    <li>Software VST</li>
+                    <li>Accesorios</li> -->
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <!-- ----------------------------MAIN -->
+        <main>
+            <h2 class="tituloMain">Carrito</h2>
+            <div class="contenedorDeCarrito">
+                <p class="carritoVacio">No has seleccionado ningún item para ser feliz.</p>
+
+                <div class="carritoItems">
+
+                    <div class="carritoItem"> <!---------------------Inicio Producto -->
+                        <img src="../media/syn-minifreak.png" alt="">
+                        <div class="carritoItemTitulo">
+                            <small>Titulo</small>
+                            <h3>Arturia Minifreak</h3>
+                        </div>
+                        <div class="carritoItemCantidad">
+                            <small>Cantidad</small>
+                            <p>1</p>
+                        </div>
+                        <div class="carritoItemPrecio">
+                            <small>Precio</small>
+                            <p>1000</p>
+                        </div>
+                        <div class="carritoItemSubtotal">
+                            <small>Subtotal</small>
+                            <p>1000</p>
+                        </div>
+                        <button class="carritoItemEliminar"><img src="../icon/basura.png" alt=""></button>
+                    </div><!---------------------Inicio Producto -->
+
+                    <div class="carritoItem"> <!---------------------Inicio Producto -->
+                        <img src="../media/drm-tr8s.png" alt="">
+                        <div class="carritoItemTitulo">
+                            <small>Titulo</small>
+                            <h3>Roland TR-8S</h3>
+                        </div>
+                        <div class="carritoItemCantidad">
+                            <small>Cantidad</small>
+                            <p>1</p>
+                        </div>
+                        <div class="carritoItemPrecio">
+                            <small>Precio</small>
+                            <p>1000</p>
+                        </div>
+                        <div class="carritoItemSubtotal">
+                            <small>Subtotal</small>
+                            <p>1000</p>
+                        </div>
+                        <button class="carritoItemEliminar"><img src="../icon/basura.png" alt=""></button>
+                    </div><!---------------------Inicio Producto -->
+                </div>
+
+                <div class="carritoMenuBottom">
+                    <div class="carritoMenuBottom1">
+                        <button class="carritoMenuBottomVaciar">Vaciar Carrito</button>
+                    </div>
+                    <div class="carritoMenuBottom2">
+                        <div class="carritoMenuBottomTotal">
+                            <p>Total</p>
+                            <p id="totalCompra">$3000</p>
+                            <button>Finalizar Compra</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </main>
+
+
+
+
+
+
+        <!-- ----------------------------FOOTER -->
+        <footer>
+            <p>Todos los derechos reservados © </p>
+            <p>Autor: Seb Lusher</p>
+        </footer>
+
+
+
+
+
+
+    </div><!-- ----------FIN DE CONTENEDOR MAIN -->
+    <script src="../script/script.js"></script>
+</body>
+
+</html>

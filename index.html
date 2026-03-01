@@ -12,54 +12,75 @@
 </head>
 
 <body>
-    <div class="contenedorPrincipal">
-
+    <div class="contenedorPrincipal"><!-- ----------CONTENEDOR MAIN -->
         <!-- ----------------------------HEADER -->
         <header>
             <div class="barraTop">
                 <a href="#"><img class="synthworldLogo" src="./media/synthworld-logo.png"
                         alt="Logotipo de Synth World E-Shop"></a>
                 <h1>Synth World Shop</h1>
-                <h2>Login</h2>
-                <h2>Carrito</h2>
+                <p><img class="iconoFormato" src="./icon/usuario.png" alt="">Login</p>
+                <a class="botonMenu botonDeCarrito" href="./pages/carro.html"><img class="iconoFormato"
+                        src="./icon/carrito-de-compras.png" alt="">Carrito <span class="cantidadItemsAgregados">0</span>
+                </a>
             </div>
             <nav class="header_navbar">
                 <ul class="navbar__menu">
-                    <li>Productos disponibles (todos)</li>
+                    <li><button class="botonMenu botonDeCategoria active">Productos disponibles</button></li>
+                    <li><button class="botonMenu botonDeCategoria">Sintetizadores</button></li>
+                    <li><button class="botonMenu botonDeCategoria">Drum machines</button></li>
+                    <li><button class="botonMenu botonDeCategoria">Software VST</button></li>
+                    <li><button class="botonMenu botonDeCategoria">Accesorios</button></li>
+                    <!-- <li>Productos disponibles (todos)</li>
                     <li>Sintetizadores</li>
                     <li>Drum machines</li>
                     <li>Software VST</li>
-                    <li>Accesorios</li>
+                    <li>Accesorios</li> -->
                 </ul>
-
             </nav>
-
         </header>
-
         <!-- ----------------------------MAIN -->
         <main>
-
+            <h2 class="tituloMain">Productos</h2>
+            <div class="contenedorDeProductos">
+                <div class="item"> <!------------------PRODUCTO-->
+                    <img class="itemImagen" src="./media/drm-circuit.png" alt="">
+                    <h3 class="itemTitulo">Arturia Minifreak</h3>
+                    <p class="itemPrecio">1000</p>
+                    <button class="itemAgregar">Agregar</button>
+                </div><!-------------------------------FIN PRODUCTO-->
+                <div class="item"> <!------------------PRODUCTO-->
+                    <img class="itemImagen" src="./media/syn-minifreak.png" alt="">
+                    <h3 class="itemTitulo">Arturia Minifreak</h3>
+                    <p class="itemPrecio">1000</p>
+                    <button class="itemAgregar">Agregar</button>
+                </div><!-------------------------------FIN PRODUCTO-->
+                <div class="item"> <!------------------PRODUCTO-->
+                    <img class="itemImagen" src="./media/drm-tr8s.png" alt="">
+                    <h3 class="itemTitulo">Arturia Minifreak</h3>
+                    <p class="itemPrecio">1000</p>
+                    <button class="itemAgregar">Agregar</button>
+                </div><!-------------------------------FIN PRODUCTO-->
+                <div class="item"> <!------------------PRODUCTO-->
+                    <img class="itemImagen" src="./media/syn-jx08.png" alt="">
+                    <h3 class="itemTitulo">Arturia Minifreak</h3>
+                    <p class="itemPrecio">1000</p>
+                    <button class="itemAgregar">Agregar</button>
+                </div><!-------------------------------FIN PRODUCTO-->
+                <div class="item"> <!------------------PRODUCTO-->
+                    <img class="itemImagen" src="./media/sft-valhalla.png" alt="">
+                    <h3 class="itemTitulo">Arturia Minifreak</h3>
+                    <p class="itemPrecio">1000</p>
+                    <button class="itemAgregar">Agregar</button>
+                </div><!-------------------------------FIN PRODUCTO-->
+            </div>
         </main>
-
         <!-- ----------------------------FOOTER -->
         <footer>
-
+            <p>Todos los derechos reservados © </p>
+            <p>Autor: Seb Lusher</p>
         </footer>
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-    <img src="./media/1.png" alt="">
+    </div><!-- ----------FIN DE CONTENEDOR MAIN -->
     <script src="./script/script.js"></script>
 </body>
 
