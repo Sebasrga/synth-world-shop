@@ -86,6 +86,12 @@ header {
     align-items: center;
 }
 
+.cantidadItemsAgregados{
+    padding: 0.5rem;
+    border: 0.5px solid black;
+    border-radius: 0.5rem;
+}
+
 .header_navbar {
     width: 100%;
     background-color: var(--color2);
@@ -160,12 +166,21 @@ main {
 }
 
 .itemAgregar{
-border: 0;
+/* border: 0; */
+border: 3px solid var(--color6);
+border-radius: 0.5rem;
 background-color: var(--color6);
 color: var(--color5);
-padding: 0.5rem;
+padding: 0.3rem;
 font-size: 1.5rem;
+cursor: pointer;
+transition: box-shadow 0.2s ease;
 }
+
+.itemAgregar:hover{
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
 
 
 
@@ -192,4 +207,117 @@ footer {
 
 .footerTexto {
     font-size: 1.3rem;
+}
+/* ---------------- CARRITO ------------------ */
+
+
+.carritoVacio,
+.carritoCompra{
+    /* display: none; */
+}
+
+.contenedorDeCarrito{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.carritoItems{
+    display: flex;
+    flex-direction: column;
+    /* padding-bottom: 15px; */
+    
+    gap: 1rem;
+    
+}
+
+.carritoItem{
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    
+}
+
+.carritoItemImagen{
+    width: 200px;
+    /* margin-top: 15px;
+    margin-left: 15px; */
+}
+
+.carritoItemSmall{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.iconoTrashFormato{
+width: 30px;
+}
+
+.carritoItemEliminar{
+    border: 0;
+/* border: 3px solid var(--color6); */
+border-radius: 0.5rem;
+/* background-color: var(--color5); */
+background-color: transparent;
+/* color: var(--color5); */
+padding: 0.3rem;
+font-size: 1.5rem;
+
+cursor: pointer;
+}
+
+.carritoMenuBottom{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+
+.carritoMenuBottomVaciar{
+/* border: 0; */
+border: 3px solid rgb(253, 97, 97);
+border-radius: 0.5rem;
+background-color: #fdabab;
+color: var(--color1);
+padding: 0.3rem;
+font-size: 1.5rem;
+cursor: pointer;
+transition: box-shadow 0.2s ease;
+}
+
+.carritoMenuBottomVaciar:hover{
+box-shadow: 0 0 10px #fa0303;
+}
+
+
+.carritoMenuBottomTotalTitulo{
+    font-size: 1.8rem;
+}
+
+.carritoMenuBottomTotal{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.carritoMenuBottomFinalizar{
+   border: 3px solid #6aff00;
+border-radius: 0.5rem;
+background-color: #d5fac4;
+color: var(--color1);
+padding: 0.3rem;
+font-size: 1.5rem;
+cursor: pointer;
+transition: box-shadow 0.2s ease; 
+}
+.carritoMenuBottomFinalizar:hover{
+box-shadow: 0 0 10px #72fa03;
+}
+
+.carritoInicio{
+    display: none;
 }
