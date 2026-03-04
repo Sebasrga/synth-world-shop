@@ -144,6 +144,7 @@ const productos = [
 //console.log(productos.find((producto) => producto.id === "syn001"));
 const contenedorDeProductos = document.querySelector("#contenedorDeProductos");
 const botonesMenu = document.querySelectorAll(".botonMenu");
+const elTituloMain = document.querySelector("#tituloMain");
 
 function cargarProductos(seleccionDeProductos) {
 
@@ -156,7 +157,7 @@ function cargarProductos(seleccionDeProductos) {
         contenedorDiv.classList.add("item")
         contenedorDiv.innerHTML = `
 
-        <img class="itemImagen" src="${producto.imagen}" alt="${producto.nombre}">
+        <img class="itemImagen" src="./media/${producto.imagen}" alt="${producto.nombre}">
         <p class="itemInfo">${producto.descripcion}</p>
         <div class="itemSubMenu">
             <h3 class="itemTitulo">${producto.nombre}</h3>
@@ -183,13 +184,24 @@ botonesMenu.forEach(boton => {
 
         e.currentTarget.classList.add("active");
 
-        // const botonMenuFiltro = productos.filter(producto =>producto.categoria === "Accesorios");
 
-        const botonMenuFiltro = productos.filter(producto => producto.categoria === e.currentTarget.id);
+        if (e.currentTarget.id !== "todosLosProductos") {
 
-console.log(e.currentTarget.id);
+            const botonMenuFiltro = productos.filter(producto => producto.categoria === e.currentTarget.id);
+            cargarProductos(botonMenuFiltro);
 
-        cargarProductos(botonMenuFiltro);
+            const laCategoria = productos.find(producto => producto.categoria === e.currentTarget.id);
+            elTituloMain.innerText = laCategoria.categoria;
+
+
+        } else {
+            cargarProductos(productos);
+            elTituloMain.innerText = "Todos los productos disponibles!"
+
+        }
+
+
+
 
     })
 
