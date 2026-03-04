@@ -47,6 +47,7 @@ a {
     font: inherit;
     color: inherit;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 
@@ -115,6 +116,19 @@ header {
 .iconoFormato {
     width: 30px;
 }
+
+.active{
+    /* background-color: var(--color3); */
+    transition: box-shadow 0.2s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    /* background-color: #6aff00; */
+}
+
+/* .active:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+} */
+
+
 
 
 

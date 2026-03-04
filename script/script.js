@@ -143,12 +143,14 @@ const productos = [
 
 //console.log(productos.find((producto) => producto.id === "syn001"));
 const contenedorDeProductos = document.querySelector("#contenedorDeProductos");
+const botonesMenu = document.querySelectorAll(".botonMenu");
+
+function cargarProductos(seleccionDeProductos) {
+
+    contenedorDeProductos.innerHTML = "";
 
 
-
-
-function cargarProductos() {
-    productos.forEach(producto => {
+    seleccionDeProductos.forEach(producto => {
 
         const contenedorDiv = document.createElement("div");
         contenedorDiv.classList.add("item")
@@ -159,19 +161,40 @@ function cargarProductos() {
         <div class="itemSubMenu">
             <h3 class="itemTitulo">${producto.nombre}</h3>
             <p class="itemPrecio">$${producto.precio}</p>
-            <button class="itemAgregar id="${producto.id}">Agregar</button>
+           <button class="itemAgregar" id="${producto.categoria}">Agregar</button>
         </div>
+        
 `
-contenedorDeProductos.append(contenedorDiv);
-
+        contenedorDeProductos.append(contenedorDiv);
     });
-
 };
 
+cargarProductos(productos); //--------------------------------SE CARGAN LOS PRODUCTOS A LA GRILLA
 
-cargarProductos();
+
+// console.log(botonesMenu);
 
 
+
+botonesMenu.forEach(boton => {
+    boton.addEventListener("click", (e) => {
+
+        botonesMenu.forEach(boton => boton.classList.remove("active"));
+
+        e.currentTarget.classList.add("active");
+
+        // const botonMenuFiltro = productos.filter(producto =>producto.categoria === "Accesorios");
+
+        const botonMenuFiltro = productos.filter(producto => producto.categoria === e.currentTarget.id);
+
+console.log(e.currentTarget.id);
+
+        cargarProductos(botonMenuFiltro);
+
+    })
+
+
+})
 
 
 
