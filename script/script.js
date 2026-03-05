@@ -213,7 +213,44 @@ function actualizandoBotonesAgregarItem() {
     });
 }
 
-const productosEnCarrito = [];
+
+
+
+
+
+let productosEnCarrito;
+
+
+
+const productosEnCarritoLS = JSON.parse(localStorage.getItem("productos-carrito"));
+
+if(productosEnCarritoLS){
+
+    productosEnCarrito = productosEnCarritoLS;
+    actualizarCantidadItemsAgregados();
+} else{
+
+    productosEnCarrito = [];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function agregarAlCarrito(e) {
     const idBotonAgregar = e.currentTarget.id;
@@ -234,19 +271,19 @@ function agregarAlCarrito(e) {
 
     }
 
-    actualizarCantidadItemsAgregados() //Actualizacion de cantidad en carrito
+    actualizarCantidadItemsAgregados(); //Actualizacion de cantidad en carrito
 
     localStorage.setItem("productos-carrito", JSON.stringify(productosEnCarrito));
-    
 
-    
+
+
 
 }
 
 function actualizarCantidadItemsAgregados() {
     let cantidadItemsAgregadosUpdate = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
 
-    cantidadItemsAgregados.innerText = cantidadItemsAgregadosUpdate
+    cantidadItemsAgregados.innerText = cantidadItemsAgregadosUpdate;
 
 }
 
