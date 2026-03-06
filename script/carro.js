@@ -4,21 +4,22 @@ const contenedorCarritoVacio = document.querySelector("#carritoVacio");
 const contenedorCarritoItems = document.querySelector("#carritoItems");
 const contenedorCarritoMenuBottom = document.querySelector("#carritoMenuBottom");
 const contenedorCarritoCompra = document.querySelector("#carritoCompra");
+let botonTrash = document.querySelectorAll(".carritoItemEliminar");
 
-// const contenedorCarritoVacioMensaje = document.querySelector("#carritoVacioMensaje");
+// const contenedorCarritoVacioMensaje = document.querySelector("#carritoVacioMensaje"); //-----------------
+
+function cargarProductosEnCarrito(){
 
 if (productosEnCarrito) {
 
 
 
     contenedorCarritoVacio.classList.add("carritoInicio");
-
-    
     contenedorCarritoItems.classList.remove("carritoInicio");
     contenedorCarritoMenuBottom.classList.remove("carritoInicio");
-    // contenedorCarritoCompra.classList.add("carritoInicio");
+    contenedorCarritoCompra.classList.add("carritoInicio");
 
-//   contenedorCarritoVacioMensaje.classList.add("carritoInicio");
+ // // contenedorCarritoVacioMensaje.classList.add("carritoInicio"); //----------------
 
 
 
@@ -51,7 +52,7 @@ if (productosEnCarrito) {
                             <small class="carritoItemSmall">Subtotal</small>
                             <p>${producto.precio * producto.cantidad}</p>
                         </div>
-                        <button class="carritoItemEliminar" id="producto.id" ><img class="iconoTrashFormato" src="../icon/basura.png" alt=""></button>
+                        <button class="carritoItemEliminar" id="${producto.id}" ><img class="iconoTrashFormato" src="../icon/basura.png" alt=""></button>
 
 `;
 
@@ -63,6 +64,49 @@ if (productosEnCarrito) {
 
 
 } else {
+    contenedorCarritoVacio.classList.remove("carritoInicio");
+    contenedorCarritoItems.classList.add("carritoInicio");
+    contenedorCarritoMenuBottom.classList.add("carritoInicio");
+    contenedorCarritoCompra.classList.add("carritoInicio");
+// contenedorCarritoVacioMensaje.classList.remove("carritoInicio"); //-----------------
+}
+
+
+actualizandoBotonesEliminar();
+
+}
+
+cargarProductosEnCarrito()
+
+
+
+
+
+
+
+
+
+function actualizandoBotonesEliminar() {
+    botonTrash = document.querySelectorAll(".carritoItemEliminar");
+
+    botonTrash.forEach(boton => {
+        boton.addEventListener("click", eliminarDelCarrito);
+    });
+}
+
+function eliminarDelCarrito(e){
+const idBoton = e.currentTarget.id;
+// const itemEliminado = productosEnCarrito.find(producto => producto.id === idBoton); //Trae todo el objeto
+
+const index = productosEnCarrito.findIndex(producto => producto.id === idBoton)
+
+
+console.log(productosEnCarrito);
+
+productosEnCarrito.splice(index, 1);
+console.log(productosEnCarrito);
+
+cargarProductosEnCarrito()
 
 }
 
