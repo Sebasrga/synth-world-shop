@@ -11,120 +11,43 @@
 
 <body>
     <div class="contenedorPrincipal"><!-- ----------CONTENEDOR MAIN -->
-
-        <!-- ----------------------------HEADER -->
         <header>
             <div class="barraTop">
                 <a href="../index.html"><img class="synthworldLogo" src="../media/synthworld-logo.png"
                         alt="Logotipo de Synth World E-Shop"></a>
                 <h1>Synth World Shop</h1>
-
                 <div class="menuLogin menuDesactivado">
                     <img class="iconoFormato" src="../icon/usuario.png" alt="">
                     <p>Login</p>
                     <p>Logout</p>
                 </div>
-
-
                 <div class="menuCarrito menuDesactivado">
                     <a class="botonMenu botonDeCarrito" href="#"><img class="iconoFormato"
                             src="../icon/carrito-de-compras.png" alt=""></a>
                     <a class="botonMenu botonDeCarrito" href="#">Carrito <span class="cantidadItemsAgregados"
                             id="cantidadItemsAgregados">0</span></a>
                 </div>
-
             </div>
             <nav class="header_navbar">
                 <ul class="navbar__menu">
 
-
-                    <!-- <li><button class="botonMenu botonDeCategoria">Continuar comprando</button></li> -->
-
-                    <!-- <a href="../index.html">Continuar comprando</a> -->
-
-                    <li><button class="botonMenu botonDeCategoria avtive botonSeguir"><a href="../index.html"><img
+                    <li><button class="botonMenu botonDeCategoria avtive efectoEnBoton"><a href="../index.html"><img
                                     src="../icon/deshacer.png" alt=""> Continuar comprando</a></button></li>
-
-                    <!-- <li><button class="botonMenu botonDeCategoria">Productos disponibles</button></li>
-                    <li><button class="botonMenu botonDeCategoria">Sintetizadores</button></li>
-                    <li><button class="botonMenu botonDeCategoria">Drum machines</button></li>
-                    <li><button class="botonMenu botonDeCategoria">Software VST</button></li>
-                    <li><button class="botonMenu botonDeCategoria">Accesorios</button></li> -->
-
-
-
-
-                    <!-- <li>Productos disponibles (todos)</li>
-                    <li>Sintetizadores</li>
-                    <li>Drum machines</li>
-                    <li>Software VST</li>
-                    <li>Accesorios</li> -->
                 </ul>
-
             </nav>
-
         </header>
-
         <!-- ----------------------------MAIN -->
         <main>
             <h2 class="tituloMain">Carrito</h2>
             <div class="contenedorDeCarrito">
 
-
-
-
-
-
                 <div class="carritoVacio carritoVacioMensaje" id="carritoVacio">
                     <p class="carritoMensajito">No has seleccionado ningún item para ser feliz.</p>
                 </div>
 
-
-
-
-
-
-
-
                 <div class="carritoItems carritoInicio" id="carritoItems">
 
-
-
-
-
-
-                    <!-- ----------CONTENEDOR DE PRODUCTOS
-                    <div class="carritoItem">
-                        <img class="carritoItemImagen" src="../media/drm002-sh4d.png" alt="">
-                        <div class="carritoItemTitulo">
-                            <small class="carritoItemSmall">Titulo</small>
-                            <h3>Arturia Minifreak</h3>
-                        </div>
-                        <div class="carritoItemCantidad">
-                            <small class="carritoItemSmall">Cantidad</small>
-                            <p>1</p>
-                        </div>
-                        <div class="carritoItemPrecio">
-                            <small class="carritoItemSmall">Precio</small>
-                            <p>1000</p>
-                        </div>
-                        <div class="carritoItemSubtotal">
-                            <small class="carritoItemSmall">Subtotal</small>
-                            <p>1000</p>
-                        </div>
-                        <button class="carritoItemEliminar"><img class="iconoTrashFormato" src="../icon/basura.png" alt=""></button>
-                    </div> -->
-
-
-
-
-
-
-
-
-
-
-
+                    <!-- CONTENEDOR DE PRODUCTOS -->
 
                 </div>
 
@@ -140,19 +63,11 @@
                                 Compra</button>
                         </div>
                     </div>
-
                 </div>
-                <p class="carritoCompra carritoInicio carritoMensajito" id="carritoCompra">Compra felizmente realizada con exito.</p>
-
+                <p class="carritoCompra carritoInicio carritoMensajito" id="carritoCompra">Compra felizmente realizada
+                    con exito.</p>
             </div>
-
         </main>
-
-
-
-
-
-
         <!-- ----------------------------FOOTER -->
         <footer>
             <div class="footerContenedor">
@@ -163,13 +78,8 @@
                 <img class="iconoFormato" src="../icon/linkedin.png" alt="">
             </div>
         </footer>
-
-
-
-
-
-
     </div><!-- ----------FIN DE CONTENEDOR MAIN -->
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="../script/carro.js"></script>

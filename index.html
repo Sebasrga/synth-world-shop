@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synth World Shop</title>
-    <!-- Libreria de iconos -->
-    <!-- <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-thin-chubby/css/uicons-thin-chubby.css'> -->
+
     <!-- STYLE -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="./style/style.css">
@@ -14,64 +13,40 @@
 
 <body>
     <div class="contenedorPrincipal"><!-- ----------CONTENEDOR MAIN -->
-        <!-- ----------------------------HEADER -->
         <header>
             <div class="barraTop">
                 <a href="#"><img class="synthworldLogo" src="./media/synthworld-logo.png"
                         alt="Logotipo de Synth World E-Shop"></a>
                 <h1>Synth World Shop</h1>
 
-
                 <div class="menuLogin">
                     <img class="iconoFormato" src="./icon/usuario.png" alt="">
                     <div>
                         <button class="estiloLogin login" id="login">Login</button>
-                        <!-- <p class="login" id="login" >Login</p> -->
                     </div>
                     <div>
                         <button class="estiloLogin logout" id="logout">Logout</button>
-                        <!-- <p class="logout" id="logout" >Logout</p> -->
                     </div>
-                    
                 </div>
-
-
-
-
-
-
                 <div class="menuCarrito">
                     <a class="botonMenu botonDeCarrito" href="./pages/carro.html"><img class="iconoFormato"
                             src="./icon/carrito-de-compras.png" alt=""></a>
                     <a class="botonMenu botonDeCarrito" href="./pages/carro.html">Carrito <span
-                            class="cantidadItemsAgregados" id="cantidadItemsAgregados" >0</span></a>
+                            class="cantidadItemsAgregados" id="cantidadItemsAgregados">0</span></a>
                 </div>
-
-
             </div>
             <nav class="header_navbar">
                 <ul class="navbar__menu">
-
-
-
-                    <li><button id="todosLosProductos" class="botonMenu botonDeCategoria active">Productos
+                    <li><button id="todosLosProductos" class="botonMenu botonDeCategoria active efectoEnBoton">Productos
                             disponibles</button></li>
-                    <li><button id="Sinterizador" class="botonMenu botonDeCategoria">Sintetizadores</button></li>
-                    <li><button id="DrumMachines" class="botonMenu botonDeCategoria">Drum machines</button></li>
-                    <li><button id="Software" class="botonMenu botonDeCategoria">Software VST</button></li>
-                    <li><button id="Accesorios" class="botonMenu botonDeCategoria">Accesorios</button></li>
-
-
-
-
-
-
-
-                    <!-- <li>Productos disponibles (todos)</li>
-                    <li>Sintetizadores</li>
-                    <li>Drum machines</li>
-                    <li>Software VST</li>
-                    <li>Accesorios</li> -->
+                    <li><button id="Sinterizador"
+                            class="botonMenu botonDeCategoria efectoEnBoton">Sintetizadores</button></li>
+                    <li><button id="DrumMachines" class="botonMenu botonDeCategoria efectoEnBoton">Drum
+                            machines</button></li>
+                    <li><button id="Software" class="botonMenu botonDeCategoria efectoEnBoton">Software VST</button>
+                    </li>
+                    <li><button id="Accesorios" class="botonMenu botonDeCategoria efectoEnBoton">Accesorios</button>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -81,24 +56,11 @@
 
             <div id="contenedorDeProductos" class="contenedorDeProductos">
 
-                <!--------------------------------------------------------------------------------- PRODUCTO
-                <div class="item"> 
-                    <img class="itemImagen" src="./media/drm001-circuit.png" alt="">
-                    <p class="itemInfo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo est culpa veniam
-                        similique quae earum inventore distinctio nemo dicta fuga, id dolorem, reprehenderit a harum
-                        suscipit itaque natus vitae expedita.</p>
-                    <div class="itemSubMenu">
-                        <h3 class="itemTitulo">Arturia Minifreak</h3>
-                        <p class="itemPrecio">1000</p>
-                        <button class="itemAgregar">Agregar</button>
-                    </div>
-                </div>
------------------------------------------------------------------------------------- FIN DE PRODUCTO -->
-
-
+                <!------------------------------------------------------------ PRODUCTO
+    <h3>LISTA DE PRODUCTOS JS</h3>
+-------------------------------------------------------------- FIN DE PRODUCTO -->
             </div>
         </main>
-
         <!-- ----------------------------FOOTER -->
         <footer>
             <div class="footerContenedor">
@@ -109,9 +71,8 @@
                 <img class="iconoFormato" src="./icon/linkedin.png" alt="">
             </div>
         </footer>
-
     </div><!-- ----------FIN DE CONTENEDOR MAIN -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./script/script.js"></script>
 </body>
 

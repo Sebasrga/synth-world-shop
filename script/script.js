@@ -4,14 +4,9 @@ fetch("./data/dbase.json")
     .then(response => response.json())
     .then(data => {
         productos = data;
-
         cargarProductos(productos); //--------------------------------SE CARGAN LOS PRODUCTOS A LA GRILLA
-
     })
 
-
-
-//console.log(productos.find((producto) => producto.id === "syn001"));
 let usuarioLS = localStorage.getItem("usuario-ls");
 
 const contenedorDeProductos = document.querySelector("#contenedorDeProductos");
@@ -25,7 +20,6 @@ const logout = document.querySelector("#logout");
 function cargarProductos(seleccionDeProductos) {
     contenedorDeProductos.innerHTML = "";
     seleccionDeProductos.forEach(producto => {
-
         const contenedorDiv = document.createElement("div");
         contenedorDiv.classList.add("item")
         contenedorDiv.innerHTML = `
@@ -37,15 +31,12 @@ function cargarProductos(seleccionDeProductos) {
             <p class="itemPrecio">$${producto.precio}</p>
             <button class="itemAgregar" id="${producto.id}">Agregar</button>
         </div>
-        
 `
         contenedorDeProductos.append(contenedorDiv);
     });
     actualizandoBotonesAgregarItem()
 };
-// cargarProductos(productos); //--------------------------------SE CARGAN LOS PRODUCTOS A LA GRILLA
 
-// console.log(botonesMenu);
 botonesMenu.forEach(boton => {
     boton.addEventListener("click", (e) => {
         botonesMenu.forEach(boton => boton.classList.remove("active"));
@@ -53,10 +44,8 @@ botonesMenu.forEach(boton => {
         if (e.currentTarget.id !== "todosLosProductos") {
             const botonMenuFiltro = productos.filter(producto => producto.categoria === e.currentTarget.id);
             cargarProductos(botonMenuFiltro);
-
             const laCategoria = productos.find(producto => producto.categoria === e.currentTarget.id);
             elTituloMain.innerText = laCategoria.categoria;
-
         } else {
             cargarProductos(productos);
             elTituloMain.innerText = "Todos los productos disponibles!"
@@ -73,27 +62,22 @@ function actualizandoBotonesAgregarItem() {
 }
 
 let productosEnCarrito;
-
 let productosEnCarritoLS = localStorage.getItem("productos-carrito");
-//const productosEnCarritoLS = JSON.parse(localStorage.getItem("productos-carrito"));
 
 if (productosEnCarritoLS) {
 
     productosEnCarrito = JSON.parse(productosEnCarritoLS);
     actualizarCantidadItemsAgregados();
 } else {
-
     productosEnCarrito = [];
 }
 
 function agregarAlCarrito(e) {
 
     //----------TOSTIFY
-
     Toastify({
-        text: "Item agregado!",
+        text: "Agregado!",
         duration: 1000,
-        //destination: "https://github.com/apvarun/toastify-js",
         newWindow: true,
         close: false,
         gravity: "top",
@@ -107,44 +91,26 @@ function agregarAlCarrito(e) {
         },
         onClick: function () { } // Callback after click
     }).showToast();
-
-
-
-
     // -----------------
 
     const idBotonAgregar = e.currentTarget.id;
     const productoAgregadoAlCarrito = productos.find(producto => producto.id === idBotonAgregar); //trae todo el objeto
 
-
-
-
     if (productosEnCarrito.some(producto => producto.id === idBotonAgregar)) { //verifico si ya existe
         const indiceProductoEnCarrito = productosEnCarrito.findIndex(producto => producto.id === idBotonAgregar)
-
         productosEnCarrito[indiceProductoEnCarrito].cantidad++;
-
-
     } else {
         productoAgregadoAlCarrito.cantidad = 1;
         productosEnCarrito.push(productoAgregadoAlCarrito);
-
     }
 
     actualizarCantidadItemsAgregados(); //Actualizacion de cantidad en carrito
-
     localStorage.setItem("productos-carrito", JSON.stringify(productosEnCarrito));
-
-
-
-
 }
 
 function actualizarCantidadItemsAgregados() {
     let cantidadItemsAgregadosUpdate = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
-
     cantidadItemsAgregados.innerText = cantidadItemsAgregadosUpdate;
-
 }
 
 
@@ -154,27 +120,3 @@ function actualizarCantidadItemsAgregados() {
 //     login.innerText = "no hay usuario"
 //    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*<div class="item"> <!------------------PRODUCTO-->
-                    <img class="itemImagen" src="./media/drm001-circuit.png" alt="">
-                    <p class="itemInfo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo est culpa veniam
-                        similique quae earum inventore distinctio nemo dicta fuga, id dolorem, reprehenderit a harum
-                        suscipit itaque natus vitae expedita.</p>
-                    <div class="itemSubMenu">
-                        <h3 class="itemTitulo">Arturia Minifreak</h3>
-                        <p class="itemPrecio">1000</p>
-                        <button class="itemAgregar">Agregar</button>
-                    </div>
-                </div><!-------------------------------FIN PRODUCTO-->*/

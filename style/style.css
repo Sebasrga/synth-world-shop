@@ -1,16 +1,5 @@
 /*  */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-/* <weight>: Use a value from 200 to 1000
- <uniquifier>: Use a unique and descriptive class name
-
-https://fonts.google.com/specimen/Nunito
-
-.nunito-<uniquifier> {
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
 
 :root {
     --color1: #470A68;
@@ -51,7 +40,6 @@ a {
     font-size: 1.5rem;
 }
 
-
 /* ---------- FIN RESET ----------*/
 
 header {
@@ -60,16 +48,11 @@ header {
     align-items: center;
     position: sticky;
     top: 0;
-
 }
-
-
 
 .synthworldLogo {
     width: 130px;
 }
-
-
 
 .barraTop {
     display: flex;
@@ -86,11 +69,10 @@ header {
     gap: 8px;
 }
 
-.estiloLogin{
+.estiloLogin {
     border-style: none;
     font-size: 1rem;
     cursor: pointer;
-
 }
 
 .menuCarrito {
@@ -118,7 +100,6 @@ header {
     padding: 20px;
     justify-content: space-evenly;
     font-size: 1.1rem;
-
 }
 
 .iconoFormato {
@@ -126,19 +107,23 @@ header {
 }
 
 .active {
-    /* background-color: var(--color3); */
+
     transition: box-shadow 0.2s ease;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    /* background-color: #6aff00; */
 }
 
-/* .active:hover {
+.efectoEnBoton {
+
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+}
+
+.efectoEnBoton:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-} */
-
-
-
-
+}
 
 main {
     background-color: var(--color5);
@@ -150,19 +135,12 @@ main {
 }
 
 .contenedorDeProductos {
-    /* display: grid; */
-    /* grid-template-columns: repeat(4, 1fr); ---------------------TEMPLATE COLUMN*/
-    /* grid-template-rows: repeat(4, 1fr); */
-
     display: flex;
     flex-direction: column;
     gap: 30px;
-
-
 }
 
 .item {
-
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     gap: 10px;
@@ -171,28 +149,17 @@ main {
     align-items: center;
     justify-content: center;
     background-color: var(--color4)
-        /* display: flex;
-    align-items: center;
-    padding-bottom: 15px; */
 }
-
 
 .itemImagen {
     width: 300px;
-    /* max-width: 100%; --------------------------------USAR CON TEMPLATE-COLLUMN*/
 }
-
 
 .itemInfo {
     padding-left: 20px;
     max-width: 100%;
     font-size: 1.2rem;
 }
-
-
-/* .itemSubMenu{
-    padding-left: 15px;
-} */
 
 .itemTitulo {
     font-size: 1.5rem;
@@ -218,24 +185,6 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
-.botonSeguir.{
-    border: 3px solid var(--color6);
-    border-radius: 0.5rem;
-    background-color: var(--color6);
-    color: var(--color5);
-    padding: 0.3rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: box-shadow 0.2s ease;
-}
-
-.botonSeguir:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-}
-
-
-
-
 footer {
     display: flex;
     flex-direction: row;
@@ -246,7 +195,6 @@ footer {
     font-weight: bold;
     height: 8vh;
     width: 100%;
-
 }
 
 .footerContenedor {
@@ -254,7 +202,6 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
-
 }
 
 .footerTexto {
@@ -263,19 +210,13 @@ footer {
 
 /* ---------------- CARRITO ------------------ */
 
-
-/* .carritoVacio,
-.carritoCompra{
-     display: none;
-}  */
-
 .carritoVacioMensaje {
     display: flex;
     height: 43vh;
 }
 
-.carritoMensajito{
-   font-size: 1.3rem; 
+.carritoMensajito {
+    font-size: 1.3rem;
 }
 
 .contenedorDeCarrito {
@@ -287,10 +228,7 @@ footer {
 .carritoItems {
     display: flex;
     flex-direction: column;
-    /* padding-bottom: 15px; */
-
     gap: 1rem;
-
 }
 
 .carritoItem {
@@ -301,13 +239,10 @@ footer {
     align-items: center;
     padding: 1rem;
     border-radius: 1rem;
-
 }
 
 .carritoItemImagen {
     width: 200px;
-    /* margin-top: 15px;
-    margin-left: 15px; */
 }
 
 .carritoItemSmall {
@@ -321,14 +256,10 @@ footer {
 
 .carritoItemEliminar {
     border: 0;
-    /* border: 3px solid var(--color6); */
     border-radius: 0.5rem;
-    /* background-color: var(--color5); */
     background-color: transparent;
-    /* color: var(--color5); */
     padding: 0.3rem;
     font-size: 1.5rem;
-
     cursor: pointer;
 }
 
@@ -340,7 +271,6 @@ footer {
 }
 
 .carritoMenuBottomVaciar {
-    /* border: 0; */
     border: 3px solid rgb(253, 97, 97);
     border-radius: 0.5rem;
     background-color: #fdabab;
@@ -354,7 +284,6 @@ footer {
 .carritoMenuBottomVaciar:hover {
     box-shadow: 0 0 10px #fa0303;
 }
-
 
 .carritoMenuBottomTotalTitulo {
     font-size: 1.8rem;
@@ -385,6 +314,6 @@ footer {
     display: none;
 }
 
-.menuDesactivado{
+.menuDesactivado {
     display: none;
 }
