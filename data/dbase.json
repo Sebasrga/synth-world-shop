@@ -1,0 +1,130 @@
+[
+    {
+        "id": "acc001",
+        "nombre": "Cable de Clock externo",
+        "descripcion": "Cable de Clock externo",
+        "categoria": "Accesorios",
+        "precio": 500,
+        "imagen": "../media/acc001-cableclock.png"
+    },
+    {
+        "id": "acc002",
+        "nombre": "Cable MIDI 5 pines",
+        "descripcion": "Cable Midi de 2 Metro de largo, Corresponde a la Serie “N” de Stagg. Cable de nivel profesional con bajo nivel de ruido. Todas las fichas utilizadas por Stagg para la Serie “N”, Profesional, son de la fábrica Suiza Neutrik AG, modelo REAN. Ficha DIN de cinco patas. Buena conductividad de la señal. Muy flexible. Cubierta de PVC color negra. Cable de sección de 6 mm de diámetro.",
+        "categoria": "Accesorios",
+        "precio": 1500,
+        "imagen": "../media/acc002-cablemidi.png"
+    },
+    {
+        "id": "acc003",
+        "nombre": "Cable RCA a mimiplug 3.5mm",
+        "descripcion": "Cable RCA a mimiplug 3.5mm",
+        "categoria": "Accesorios",
+        "precio": 1000,
+        "imagen": "../media/acc003-cablercaplug.png"
+    },
+    {
+        "id": "acc004",
+        "nombre": "Cable RCA 2m",
+        "descripcion": "Cable RCA 2m",
+        "categoria": "Accesorios",
+        "precio": 900,
+        "imagen": "../media/acc004-cablercarca.jpg"
+    },
+    {
+        "id": "acc005",
+        "nombre": "Cable plug 2.5 no balanceado",
+        "descripcion": "Cable plug 2.5 no balanceado",
+        "categoria": "Accesorios",
+        "precio": 300,
+        "imagen": "../media/acc005-cabletrs.png"
+    },
+    {
+        "id": "drm001",
+        "nombre": "Novation Circuit Rhythm",
+        "descripcion": " Novation Circuit Rhythm Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo est culpa venia similique quae earum inventore distinctio nemo dicta fuga, id dolorem, reprehenderit a harum suscipit itaque natus vitae expedita.",
+        "categoria": "DrumMachines",
+        "precio": 8000,
+        "imagen": "../media/drm001-circuit.png"
+    },
+    {
+        "id": "drm002",
+        "nombre": "Roland SH4D",
+        "descripcion": "Roland SH4D",
+        "categoria": "DrumMachines",
+        "precio": 10000,
+        "imagen": "../media/drm002-sh4d.png"
+    },
+    {
+        "id": "drm003",
+        "nombre": "Roland TR-8S",
+        "descripcion": "Roland TR-8S",
+        "categoria": "DrumMachines",
+        "precio": 15000,
+        "imagen": "../media/drm003-tr8s.png"
+    },
+    {
+        "id": "sft001",
+        "nombre": "Ableton Live 12",
+        "descripcion": "Ableton Live 12",
+        "categoria": "Software",
+        "precio": 2500,
+        "imagen": "../media/sft001-ableton.png"
+    },
+    {
+        "id": "sft002",
+        "nombre": "Imageline FL Studio 13",
+        "descripcion": "Imageline FL Studio 13",
+        "categoria": "Software",
+        "precio": 2400,
+        "imagen": "../media/sft002-flstudio.png"
+    },
+    {
+        "id": "sft003",
+        "nombre": "Valhalla Supermasive",
+        "descripcion": "Valhalla Supermasive",
+        "categoria": "Software",
+        "precio": 2000,
+        "imagen": "../media/sft003-valhalla.png"
+    },
+    {
+        "id": "sft004",
+        "nombre": "Roland Zenology ALL INCLUSIVE",
+        "descripcion": "Roland Zenology ALL INCLUSIVE",
+        "categoria": "Software",
+        "precio": 2600,
+        "imagen": "../media/sft004-zenology.png"
+    },
+    {
+        "id": "syn001",
+        "nombre": "Roland JX-08",
+        "descripcion": "Roland JX-08",
+        "categoria": "Sinterizador",
+        "precio": 2500,
+        "imagen": "../media/syn001-jx08.png"
+    },
+    {
+        "id": "syn002",
+        "nombre": "Arturia Minifreak",
+        "descripcion": "Arturia Minifreak",
+        "categoria": "Sinterizador",
+        "precio": 3000,
+        "imagen": "../media/syn002-minifreak.png"
+    },
+    {
+        "id": "syn003",
+        "nombre": "Behringer ProVS mini",
+        "descripcion": "Behringer ProVS mini",
+        "categoria": "Sinterizador",
+        "precio": 1500,
+        "imagen": "../media/syn003-provsmini.png"
+    },
+    {
+        "id": "syn004",
+        "nombre": "Korg Wavestate MKII",
+        "descripcion": "Korg Wavestate MKII",
+        "categoria": "Sinterizador",
+        "precio": 3500,
+        "imagen": "../media/syn004-wavestate.png"
+    }
+]

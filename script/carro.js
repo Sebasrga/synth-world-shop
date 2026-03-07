@@ -104,6 +104,36 @@ function actualizandoBotonesEliminar() {
 }
 
 function eliminarDelCarrito(e) {
+
+
+    //----------TOSTIFY
+
+    Toastify({
+        text: "Atencion! El item fue eliminado",
+        duration: 2000,
+        //destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: false,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        avatar: "../icon/exclamacion.png",
+        style: {
+            fontSize: "1.5rem",
+            color: " #ebf306",
+            background: "linear-gradient(to right, #fe9f9f, #a10101)",
+        },
+        onClick: function () { } // Callback after click
+    }).showToast();
+
+
+
+
+    // -----------------
+
+
+
+
     const idBoton = e.currentTarget.id;
     // const itemEliminado = productosEnCarrito.find(producto => producto.id === idBoton); //Trae todo el objeto
 
@@ -128,11 +158,45 @@ function eliminarDelCarrito(e) {
 
 botonVaciarCarrito.addEventListener("click", vaciarCarrito);
 
+
+
+
 function vaciarCarrito() {
 
-    productosEnCarrito.length = 0;
-    localStorage.setItem("productos-carrito", JSON.stringify(productosEnCarrito));
-    cargarProductosEnCarrito()
+    // SWEET ALERT ----- VACIAR CARRITO
+
+    Swal.fire({
+        title: "Atencion!!",
+        text: "Estas seguro que quieres vaciar el carrito?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#d33",
+        cancelButtonColor: "#eabdfd",
+        confirmButtonText: "Si, quiero vaciar el carrito"
+    }).then((result) => {
+        if (result.isConfirmed) {
+
+            productosEnCarrito.length = 0;
+            localStorage.setItem("productos-carrito", JSON.stringify(productosEnCarrito));
+            cargarProductosEnCarrito()
+
+
+            Swal.fire({
+                title: "El carrito fue vaciado",
+                text: "Selecciona nuevamente algún item de la tienda",
+                icon: "success"
+            });
+        }
+    });
+
+
+    // sweet alert fin--------------------------
+
+
+
+    // productosEnCarrito.length = 0;
+    // localStorage.setItem("productos-carrito", JSON.stringify(productosEnCarrito));
+    // cargarProductosEnCarrito()
 }
 
 function actualizarTotales() {
@@ -156,6 +220,14 @@ function comprarCarrito() {
     contenedorCarritoMenuBottom.classList.add("carritoInicio");
     contenedorCarritoCompra.classList.remove("carritoInicio");
     // contenedorCarritoVacioMensaje.classList.remove("carritoInicio"); //-----------------
+
+
+Swal.fire({
+  title: "Compra exitosa!",
+  text: "Muchas gracias por tu compra, recibirás un correo de confirmación.",
+  icon: "success"
+});
+
 
 }
 
