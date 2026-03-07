@@ -7,7 +7,7 @@ fetch("./data/dbase.json")
         cargarProductos(productos); //--------------------------------SE CARGAN LOS PRODUCTOS A LA GRILLA
     })
 
-let usuarioLS = localStorage.getItem("usuario-ls");
+
 
 const contenedorDeProductos = document.querySelector("#contenedorDeProductos");
 const botonesMenu = document.querySelectorAll(".botonMenu");
@@ -16,6 +16,7 @@ let botonesAgregarItem = document.querySelectorAll(".itemAgregar");
 const cantidadItemsAgregados = document.querySelector("#cantidadItemsAgregados");
 const login = document.querySelector("#login");
 const logout = document.querySelector("#logout");
+
 
 function cargarProductos(seleccionDeProductos) {
     contenedorDeProductos.innerHTML = "";
@@ -114,9 +115,88 @@ function actualizarCantidadItemsAgregados() {
 }
 
 
-//    if (usuarioLS > 0) {
-//      login.innerText = "hay usuario"
-//    } else{
-//     login.innerText = "no hay usuario"
-//    }
+// LOGIN
+if (localStorage.getItem("user") !== null && localStorage.getItem("user") !== "") {
+    login.innerText = localStorage.getItem("user");
+} else {
+    login.innerText = "Login"
+}
+login.addEventListener("click", logueo);
+
+function logueo() {
+    if (localStorage.getItem("user") !== null && localStorage.getItem("user") !== "") {
+        Swal.fire({
+            title: "Atencion!",
+            text: "Ya existe un usuario logueado",
+            icon: "warning"
+        });
+    } else {
+        (async () => {
+            const { value: text } = await Swal.fire({
+                input: "textarea",
+                inputLabel: "Iniciar sesión",
+                inputPlaceholder: "Ingrese su nombre de usuario o ingrese 'invitado'",
+                inputAttributes: {
+                    "aria-label": "Type your message here"
+                },
+                showCancelButton: true
+            });
+            if (text) {
+                Swal.fire("Usuario registrado: " + text);
+                localStorage.setItem("user", text);
+                login.innerText = text;
+            }
+        })()
+    }
+}
+
+//LOGOUT
+logout.addEventListener("click", logueoout);
+
+function logueoout() {
+    if (localStorage.getItem("user") !== null && localStorage.getItem("user") !== "") {
+        Swal.fire({
+            title: "Cerrar sesion!",
+            text: "Estas seguro que quieres cerrar la sesión?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: "Cerrando la sesión!",
+                    text: "La sesión ha sigo cerrada correctamente",
+                    icon: "success"
+                });
+                localStorage.removeItem("user");
+                login.innerText = "Login"
+            }
+        });
+    } else {
+        Swal.fire({
+            title: "Atencion!",
+            text: "No existe un usuario logueado",
+            icon: "warning"
+        });
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
 
