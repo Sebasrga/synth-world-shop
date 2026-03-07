@@ -134,18 +134,33 @@ function actualizarTotales() {
 botonComprar.addEventListener("click", comprarCarrito);
 
 function comprarCarrito() {
-    productosEnCarrito.length = 0;
-    localStorage.setItem("productos-carrito", JSON.stringify(productosEnCarrito));
-    contenedorCarritoVacio.classList.add("carritoInicio");
-    contenedorCarritoItems.classList.add("carritoInicio");
-    contenedorCarritoMenuBottom.classList.add("carritoInicio");
-    contenedorCarritoCompra.classList.remove("carritoInicio");
-    // contenedorCarritoVacioMensaje.classList.remove("carritoInicio"); //-----------------
 
-
-    Swal.fire({
-        title: "Compra exitosa!",
-        text: "Muchas gracias por tu compra, recibirás un correo de confirmación.",
-        icon: "success"
-    });
-}
+    if (localStorage.getItem("user") !== null && localStorage.getItem("user") !== "") {
+        //CON LOGUEO
+        productosEnCarrito.length = 0;
+        localStorage.setItem("productos-carrito", JSON.stringify(productosEnCarrito));
+        contenedorCarritoVacio.classList.add("carritoInicio");
+        contenedorCarritoItems.classList.add("carritoInicio");
+        contenedorCarritoMenuBottom.classList.add("carritoInicio");
+        contenedorCarritoCompra.classList.remove("carritoInicio");
+        // contenedorCarritoVacioMensaje.classList.remove("carritoInicio"); //-----------------
+        Swal.fire({
+            title: "Compra exitosa!",
+            text: "Muchas gracias por tu compra, recibirás un correo de confirmación.",
+            icon: "success"
+        });
+    } else {
+        // SIN LOGUEO
+        Swal.fire({
+            title: "Sin inicio de sesion",
+            text: "Esto es una simulación. Inicie sesion para realizar la compra.",
+            icon: "warning"
+        });
+        productosEnCarrito.length = 0;
+        localStorage.setItem("productos-carrito", JSON.stringify(productosEnCarrito));
+        contenedorCarritoVacio.classList.remove("carritoInicio");
+        contenedorCarritoItems.classList.add("carritoInicio");
+        contenedorCarritoMenuBottom.classList.add("carritoInicio");
+        contenedorCarritoCompra.classList.add("carritoInicio");
+    };
+};
