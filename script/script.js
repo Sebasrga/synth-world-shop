@@ -3,7 +3,7 @@ let productos = [];
 fetch("./data/dbase.json")
     .then(response => response.json())
     .then(data => {
-        productos=data;
+        productos = data;
 
         cargarProductos(productos); //--------------------------------SE CARGAN LOS PRODUCTOS A LA GRILLA
 
@@ -12,17 +12,18 @@ fetch("./data/dbase.json")
 
 
 //console.log(productos.find((producto) => producto.id === "syn001"));
+let usuarioLS = localStorage.getItem("usuario-ls");
+
 const contenedorDeProductos = document.querySelector("#contenedorDeProductos");
 const botonesMenu = document.querySelectorAll(".botonMenu");
 const elTituloMain = document.querySelector("#tituloMain");
 let botonesAgregarItem = document.querySelectorAll(".itemAgregar");
 const cantidadItemsAgregados = document.querySelector("#cantidadItemsAgregados");
+const login = document.querySelector("#login");
+const logout = document.querySelector("#logout");
 
 function cargarProductos(seleccionDeProductos) {
-
     contenedorDeProductos.innerHTML = "";
-
-
     seleccionDeProductos.forEach(producto => {
 
         const contenedorDiv = document.createElement("div");
@@ -34,34 +35,22 @@ function cargarProductos(seleccionDeProductos) {
         <div class="itemSubMenu">
             <h3 class="itemTitulo">${producto.nombre}</h3>
             <p class="itemPrecio">$${producto.precio}</p>
-           <button class="itemAgregar" id="${producto.id}">Agregar</button>
+            <button class="itemAgregar" id="${producto.id}">Agregar</button>
         </div>
         
 `
         contenedorDeProductos.append(contenedorDiv);
     });
-
     actualizandoBotonesAgregarItem()
-
-
 };
-
 // cargarProductos(productos); //--------------------------------SE CARGAN LOS PRODUCTOS A LA GRILLA
 
-
 // console.log(botonesMenu);
-
-
-
 botonesMenu.forEach(boton => {
     boton.addEventListener("click", (e) => {
-
         botonesMenu.forEach(boton => boton.classList.remove("active"));
-
         e.currentTarget.classList.add("active");
-
         if (e.currentTarget.id !== "todosLosProductos") {
-
             const botonMenuFiltro = productos.filter(producto => producto.categoria === e.currentTarget.id);
             cargarProductos(botonMenuFiltro);
 
@@ -83,71 +72,46 @@ function actualizandoBotonesAgregarItem() {
     });
 }
 
-
-
-
-
-
 let productosEnCarrito;
-
 
 let productosEnCarritoLS = localStorage.getItem("productos-carrito");
 //const productosEnCarritoLS = JSON.parse(localStorage.getItem("productos-carrito"));
 
-if(productosEnCarritoLS){
+if (productosEnCarritoLS) {
 
     productosEnCarrito = JSON.parse(productosEnCarritoLS);
     actualizarCantidadItemsAgregados();
-} else{
+} else {
 
     productosEnCarrito = [];
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function agregarAlCarrito(e) {
 
-//----------TOSTIFY
+    //----------TOSTIFY
 
-Toastify({
-  text: "Item agregado!",
-  duration: 1000,
-  //destination: "https://github.com/apvarun/toastify-js",
-  newWindow: true,
-  close: false,
-  gravity: "top",
-  position: "right",
-  stopOnFocus: true,
-  avatar: "./icon/destellos.png",
-  style: {
-    fontSize: "1.5rem",
-    color:" #d6f8dd",
-    background: "linear-gradient(to right, #01a001, #285500)",
-  },
-  onClick: function(){} // Callback after click
-}).showToast();
-
-
+    Toastify({
+        text: "Item agregado!",
+        duration: 1000,
+        //destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: false,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        avatar: "./icon/destellos.png",
+        style: {
+            fontSize: "1.5rem",
+            color: " #d6f8dd",
+            background: "linear-gradient(to right, #01a001, #285500)",
+        },
+        onClick: function () { } // Callback after click
+    }).showToast();
 
 
-// -----------------
+
+
+    // -----------------
 
     const idBotonAgregar = e.currentTarget.id;
     const productoAgregadoAlCarrito = productos.find(producto => producto.id === idBotonAgregar); //trae todo el objeto
@@ -182,6 +146,24 @@ function actualizarCantidadItemsAgregados() {
     cantidadItemsAgregados.innerText = cantidadItemsAgregadosUpdate;
 
 }
+
+
+//    if (usuarioLS > 0) {
+//      login.innerText = "hay usuario"
+//    } else{
+//     login.innerText = "no hay usuario"
+//    }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

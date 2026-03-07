@@ -7,7 +7,8 @@ const contenedorCarritoCompra = document.querySelector("#carritoCompra");
 let botonTrash = document.querySelectorAll(".carritoItemEliminar");
 const botonVaciarCarrito = document.querySelector("#carritoMenuBottomVaciar");
 const totalDeLaCompra = document.querySelector("#totalCompra");
-const botonComprar = document.querySelector("#carritoMenuBottomFinalizar")
+const botonComprar = document.querySelector("#carritoMenuBottomFinalizar");
+
 
 // const contenedorCarritoVacioMensaje = document.querySelector("#carritoVacioMensaje"); //-----------------
 

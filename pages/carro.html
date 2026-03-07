@@ -19,18 +19,18 @@
                         alt="Logotipo de Synth World E-Shop"></a>
                 <h1>Synth World Shop</h1>
 
-                <div class="menuLogin">
+                <div class="menuLogin menuDesactivado">
                     <img class="iconoFormato" src="../icon/usuario.png" alt="">
                     <p>Login</p>
                     <p>Logout</p>
                 </div>
 
 
-                <div class="menuCarrito">
+                <div class="menuCarrito menuDesactivado">
                     <a class="botonMenu botonDeCarrito" href="#"><img class="iconoFormato"
                             src="../icon/carrito-de-compras.png" alt=""></a>
-                    <a class="botonMenu botonDeCarrito" href="#">Carrito <span
-                            class="cantidadItemsAgregados">0</span></a>
+                    <a class="botonMenu botonDeCarrito" href="#">Carrito <span class="cantidadItemsAgregados"
+                            id="cantidadItemsAgregados">0</span></a>
                 </div>
 
             </div>
@@ -42,7 +42,8 @@
 
                     <!-- <a href="../index.html">Continuar comprando</a> -->
 
-                    <li><button class="botonMenu botonDeCategoria"><a href="../index.html">Continuar comprando</a></button></li>
+                    <li><button class="botonMenu botonDeCategoria avtive botonSeguir"><a href="../index.html"><img
+                                    src="../icon/deshacer.png" alt=""> Continuar comprando</a></button></li>
 
                     <!-- <li><button class="botonMenu botonDeCategoria">Productos disponibles</button></li>
                     <li><button class="botonMenu botonDeCategoria">Sintetizadores</button></li>
@@ -68,10 +69,22 @@
         <main>
             <h2 class="tituloMain">Carrito</h2>
             <div class="contenedorDeCarrito">
-                <p class="carritoVacio" id="carritoVacio">No has seleccionado ningún item para ser feliz.</p>
-                <!-- <div class="carritoVacioMensaje">
 
-                </div> -->
+
+
+
+
+
+                <div class="carritoVacio carritoVacioMensaje" id="carritoVacio">
+                    <p class="carritoMensajito">No has seleccionado ningún item para ser feliz.</p>
+                </div>
+
+
+
+
+
+
+
 
                 <div class="carritoItems carritoInicio" id="carritoItems">
 
@@ -117,18 +130,19 @@
 
                 <div class="carritoMenuBottom carritoInicio" id="carritoMenuBottom">
                     <div class="carritoMenuBottom1">
-                        <button class="carritoMenuBottomVaciar" id="carritoMenuBottomVaciar" >Vaciar Carrito</button>
+                        <button class="carritoMenuBottomVaciar" id="carritoMenuBottomVaciar">Vaciar Carrito</button>
                     </div>
                     <div class="carritoMenuBottom2">
                         <div class="carritoMenuBottomTotal">
                             <p class="carritoMenuBottomTotalTitulo">Total</p>
                             <p id="totalCompra">$3000</p>
-                            <button class="carritoMenuBottomFinalizar" id="carritoMenuBottomFinalizar" >Finalizar Compra</button>
+                            <button class="carritoMenuBottomFinalizar" id="carritoMenuBottomFinalizar">Finalizar
+                                Compra</button>
                         </div>
                     </div>
 
                 </div>
-                <p class="carritoCompra carritoInicio" id="carritoCompra">Compra felizmente realizada con exito.</p>
+                <p class="carritoCompra carritoInicio carritoMensajito" id="carritoCompra">Compra felizmente realizada con exito.</p>
 
             </div>
 
