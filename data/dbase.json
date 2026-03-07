@@ -2,7 +2,7 @@
     {
         "id": "acc001",
         "nombre": "Cable de Clock externo",
-        "descripcion": "Cable de Clock externo",
+        "descripcion": "Cable de Clock externo TR 3.5mm para conexion de sync y clock.",
         "categoria": "Accesorios",
         "precio": 500,
         "imagen": "../media/acc001-cableclock.png"
@@ -10,7 +10,7 @@
     {
         "id": "acc002",
         "nombre": "Cable MIDI 5 pines",
-        "descripcion": "Cable Midi de 2 Metro de largo, Corresponde a la Serie “N” de Stagg. Cable de nivel profesional con bajo nivel de ruido. Todas las fichas utilizadas por Stagg para la Serie “N”, Profesional, son de la fábrica Suiza Neutrik AG, modelo REAN. Ficha DIN de cinco patas. Buena conductividad de la señal. Muy flexible. Cubierta de PVC color negra. Cable de sección de 6 mm de diámetro.",
+        "descripcion": "Cable Midi de 2 Metro de largo, ficha DIN de cinco patas.",
         "categoria": "Accesorios",
         "precio": 1500,
         "imagen": "../media/acc002-cablemidi.png"
@@ -18,7 +18,7 @@
     {
         "id": "acc003",
         "nombre": "Cable RCA a mimiplug 3.5mm",
-        "descripcion": "Cable RCA a mimiplug 3.5mm",
+        "descripcion": "Cable RCA a mimiplug 3.5mm. Conectá tus dispositivos de manera sencilla y eficiente con el Cable de Audio y Video RCA a Mini Plug.",
         "categoria": "Accesorios",
         "precio": 1000,
         "imagen": "../media/acc003-cablercaplug.png"
@@ -26,7 +26,7 @@
     {
         "id": "acc004",
         "nombre": "Cable RCA 2m",
-        "descripcion": "Cable RCA 2m",
+        "descripcion": "Cable RCA 2m. Cable Audio Premium 2 Rca Macho A 2 Rca Macho 2m.",
         "categoria": "Accesorios",
         "precio": 900,
         "imagen": "../media/acc004-cablercarca.jpg"
@@ -42,7 +42,7 @@
     {
         "id": "drm001",
         "nombre": "Novation Circuit Rhythm",
-        "descripcion": " Novation Circuit Rhythm Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo est culpa venia similique quae earum inventore distinctio nemo dicta fuga, id dolorem, reprehenderit a harum suscipit itaque natus vitae expedita.",
+        "descripcion": "Novation Circuit Rhythm. Es una groovebox sampler independiente y compacta, diseñada para la creación e interpretación de ritmos electrónicos en cualquier lugar.",
         "categoria": "DrumMachines",
         "precio": 8000,
         "imagen": "../media/drm001-circuit.png"
@@ -50,7 +50,7 @@
     {
         "id": "drm002",
         "nombre": "Roland SH4D",
-        "descripcion": "Roland SH4D",
+        "descripcion": "Roland SH4D. Es un sintetizador de escritorio compacto y portátil, diseñado como una fábrica de inspiración que combina secuenciación avanzada, motores de sonido versátiles y una interfaz de control directo.",
         "categoria": "DrumMachines",
         "precio": 10000,
         "imagen": "../media/drm002-sh4d.png"
@@ -58,7 +58,7 @@
     {
         "id": "drm003",
         "nombre": "Roland TR-8S",
-        "descripcion": "Roland TR-8S",
+        "descripcion": "Roland TR-8S. Es una potente caja de ritmos y sampler de alto rendimiento, diseñada para la producción y actuación en directo. Combina la emulación de los sonidos clásicos de Roland (TR-808, 909, 707, etc.) mediante tecnología ACB.",
         "categoria": "DrumMachines",
         "precio": 15000,
         "imagen": "../media/drm003-tr8s.png"
@@ -66,7 +66,7 @@
     {
         "id": "sft001",
         "nombre": "Ableton Live 12",
-        "descripcion": "Ableton Live 12",
+        "descripcion": "Ableton Live 12. Es la versión más reciente del popular software de producción musical (DAW), diseñado para la creación, producción e interpretación en directo de música de forma fluida y flexible.",
         "categoria": "Software",
         "precio": 2500,
         "imagen": "../media/sft001-ableton.png"
@@ -74,7 +74,7 @@
     {
         "id": "sft002",
         "nombre": "Imageline FL Studio 13",
-        "descripcion": "Imageline FL Studio 13",
+        "descripcion": "Image-Line FL Studio (anteriormente FruityLoops) es una popular estación de trabajo de audio digital (DAW) utilizada para la producción musical, secuenciación, grabación y mezcla.",
         "categoria": "Software",
         "precio": 2400,
         "imagen": "../media/sft002-flstudio.png"
@@ -82,7 +82,7 @@
     {
         "id": "sft003",
         "nombre": "Valhalla Supermasive",
-        "descripcion": "Valhalla Supermasive",
+        "descripcion": "Valhalla Supermasive. Es un plugin VST de reverb y delay de alta calidad, diseñado por Valhalla DSP para crear sonidos espaciales, atmosféricos y masivos.",
         "categoria": "Software",
         "precio": 2000,
         "imagen": "../media/sft003-valhalla.png"
@@ -90,7 +90,7 @@
     {
         "id": "sft004",
         "nombre": "Roland Zenology ALL INCLUSIVE",
-        "descripcion": "Roland Zenology ALL INCLUSIVE",
+        "descripcion": "Roland Zenology ALL INCLUSIVE. Es un sintetizador de software (plugin) de vanguardia que trae el potente sistema de síntesis ZEN-Core de Roland a tu ordenador, ofreciendo miles de sonidos clásicos y modernos. ",
         "categoria": "Software",
         "precio": 2600,
         "imagen": "../media/sft004-zenology.png"
@@ -98,7 +98,7 @@
     {
         "id": "syn001",
         "nombre": "Roland JX-08",
-        "descripcion": "Roland JX-08",
+        "descripcion": "Roland JX-08. Es un módulo de sintetizador compacto y portátil de la serie Boutique que recrea fielmente el sonido del clásico Roland JX-8P de 1985.",
         "categoria": "Sinterizador",
         "precio": 2500,
         "imagen": "../media/syn001-jx08.png"
@@ -106,7 +106,7 @@
     {
         "id": "syn002",
         "nombre": "Arturia Minifreak",
-        "descripcion": "Arturia Minifreak",
+        "descripcion": "Arturia Minifreak. Es un sintetizador híbrido polifónico de 6 voces que combina motores de sonido digitales con filtros analógicos. Cuenta con dos osciladores, 37 teclas sensibles a la velocidad con aftertouch.",
         "categoria": "Sinterizador",
         "precio": 3000,
         "imagen": "../media/syn002-minifreak.png"
@@ -114,7 +114,7 @@
     {
         "id": "syn003",
         "nombre": "Behringer ProVS mini",
-        "descripcion": "Behringer ProVS mini",
+        "descripcion": "Behringer ProVS mini. Es un sintetizador híbrido de síntesis vectorial, ultra portátil y asequible, inspirado en el clásico Prophet VS de los años 80.",
         "categoria": "Sinterizador",
         "precio": 1500,
         "imagen": "../media/syn003-provsmini.png"
@@ -122,7 +122,7 @@
     {
         "id": "syn004",
         "nombre": "Korg Wavestate MKII",
-        "descripcion": "Korg Wavestate MKII",
+        "descripcion": "Korg Wavestate MKII. Es un sintetizador digital compacto de 37 teclas, lanzado en 2023 como una versión mejorada del original, famoso por su motor de síntesis de Wave Sequencing 2.0.",
         "categoria": "Sinterizador",
         "precio": 3500,
         "imagen": "../media/syn004-wavestate.png"
