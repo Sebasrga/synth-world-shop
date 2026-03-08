@@ -226,9 +226,11 @@ footer {
 }
 
 .carritoItems {
+    justify-content: space-between;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    font-size: 1.3rem;
 }
 
 .carritoItem {
@@ -285,9 +287,11 @@ footer {
     box-shadow: 0 0 10px #fa0303;
 }
 
-.carritoMenuBottomTotalTitulo {
+.carritoMenuBottomTotalTitulo, .totalCompra {
     font-size: 1.8rem;
 }
+
+
 
 .carritoMenuBottomTotal {
     display: flex;
