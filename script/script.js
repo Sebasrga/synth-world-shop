@@ -118,16 +118,23 @@ function actualizarCantidadItemsAgregados() {
 // LOGIN
 if (localStorage.getItem("user") !== null && localStorage.getItem("user") !== "") {
     login.innerText = localStorage.getItem("user");
-} else {
+    //document.getElementById('login').disabled = true;
+    logout.classList.remove("menuDesactivado");
+
+    } else {
     login.innerText = "Login"
+    logout.classList.add("menuDesactivado");
+//---------------------------------------------document.getElementById('login').disabled = true;
+    
+
 }
 login.addEventListener("click", logueo);
 
 function logueo() {
     if (localStorage.getItem("user") !== null && localStorage.getItem("user") !== "") {
         Swal.fire({
-            title: "Atencion!",
-            text: "Ya existe un usuario logueado",
+            title: "Hola!",
+            text: "Proximamente aqui podras cambiar tu contraseña.",
             icon: "warning"
         });
     } else {
@@ -135,18 +142,24 @@ function logueo() {
             const { value: text } = await Swal.fire({
                 input: "textarea",
                 inputLabel: "Iniciar sesión",
-                inputPlaceholder: "Ingrese su nombre de usuario o ingrese 'invitado'",
+                inputPlaceholder: "Ingrese su nombre de usuario.",
                 inputAttributes: {
                     "aria-label": "Type your message here"
                 },
                 showCancelButton: true
             });
+
             if (text) {
                 Swal.fire("Usuario registrado: " + text);
                 localStorage.setItem("user", text);
                 login.innerText = text;
+                //document.getElementById('login').disabled = true;
+                logout.classList.remove("menuDesactivado");
             }
         })()
+
+        
+
     }
 }
 
@@ -162,7 +175,7 @@ function logueoout() {
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
+            confirmButtonText: "Si, cerrar sesión"
         }).then((result) => {
             if (result.isConfirmed) {
                 Swal.fire({
@@ -172,6 +185,8 @@ function logueoout() {
                 });
                 localStorage.removeItem("user");
                 login.innerText = "Login"
+                //mostrar boton
+                logout.classList.add("menuDesactivado");
             }
         });
     } else {
@@ -182,21 +197,4 @@ function logueoout() {
         });
     }
 
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
